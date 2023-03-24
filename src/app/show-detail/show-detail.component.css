@@ -1,0 +1,31 @@
+#cast {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.cast {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cast-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.cast-name {
+    font-weight: bold;
+}
+
+.cast-character {
+    font-style: italic;
+}
+
+.cast-image {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

@@ -1,0 +1,18 @@
+<div id="search-component">
+    <label for="search-box">Search</label>
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+    <ul id="search-results">
+        <li *ngFor="let show of shows$ | async">
+                <div class="search-result">
+                    <a routerLink="/detail/{{show.id}}">
+                        <img class="search-result-image" src="https://image.tmdb.org/t/p/w185/{{ show.poster_path }}" />
+                    </a>
+                    <div class="search-result-text">
+                        <h3><a routerLink="/detail/{{show.id}}"> {{ show.name }}</a></h3>
+                        <p><a routerLink="/detail/{{show.id}}"> {{ show.overview }}</a></p>
+                    </div>
+                </div>
+        </li>
+    </ul>
+</div>

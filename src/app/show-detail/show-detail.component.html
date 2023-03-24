@@ -1,0 +1,19 @@
+<div *ngIf="show">
+    <div id="show-overview">
+        <img id="show-overview-image" src="https://image.tmdb.org/t/p/w200{{show.poster_path}}" alt="{{show.name}}">
+        <div id="show-overview-text">
+            <h3>{{show.name}}</h3>
+            <p>{{show.overview}}</p>
+            <p>{{show.genres}}</p>
+        </div>
+    </div>
+    <div id="cast">
+        <h3>Cast</h3>
+        <div class="cast" *ngFor="let actor of cast">
+            <img class="cast-image" src="https://image.tmdb.org/t/p/w200{{actor.profile_path}}" alt="{{actor.name}}">
+            <div class="cast-text">
+                <p class="cast-name">{{actor.name}}</p>
+                <p class="cast-character">as {{actor.character}}</p>
+            </div>
+        </div>
+</div>
